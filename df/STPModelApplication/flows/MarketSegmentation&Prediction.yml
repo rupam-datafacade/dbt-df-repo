@@ -1,0 +1,141 @@
+unique_name: MarketSegmentation&Prediction
+flow_actions:
+- action_reference: convert_source_data_to_stp_model_schema
+  parameters:
+  - param_name: Data
+    global_parameter: Source Data
+  display_name: convert_source_data_to_stp_model_schema
+  stage_name: Data Preparation
+- action_reference: convert_source_data_to_stp_model_schema
+  parameters:
+  - param_name: Data
+    global_parameter: Descriptor Data
+  display_name: convert_source_data_to_stp_model_schema
+  stage_name: Data Preparation
+- action_reference: convert_source_data_to_stp_model_schema
+  parameters:
+  - param_name: Data
+    global_parameter: Sample Data
+  display_name: convert_source_data_to_stp_model_schema
+  stage_name: Data Preparation
+- action_reference: segmentation
+  parameters:
+  - param_name: data
+    source_action: convert_source_data_to_stp_model_schema-0
+  - param_name: CustomerID
+    global_parameter: Customer ID
+  - param_name: number_of_segments
+    global_parameter: Number Of Segments
+  - param_name: method
+    global_parameter: Segmentation Method
+  display_name: segmentation
+  stage_name: Modeling
+- action_reference: segmentation_summary
+  parameters:
+  - param_name: data
+    source_action: segmentation-3
+  - param_name: segment_column
+    default_value: segment
+  display_name: segmentation_summary
+  stage_name: Modeling
+- action_reference: segment_profiling
+  parameters:
+  - param_name: data
+    source_action: segmentation-3
+  - param_name: CustomerID
+    global_parameter: Customer ID
+  - param_name: segment_column
+    default_value: segment
+  display_name: segment_profiling
+  stage_name: Segment Profiling
+- action_reference: segment_difference_in_profiles
+  parameters:
+  - param_name: data
+    source_action: segmentation-3
+  - param_name: CustomerID
+    global_parameter: Customer ID
+  - param_name: segment_column
+    default_value: segment
+  display_name: segment_difference_in_profiles
+  stage_name: Segment Profiling
+- action_reference: out_of_sample_prediction
+  parameters:
+  - param_name: method
+    global_parameter: Classification Method
+  - param_name: segment_column
+    default_value: segment
+  - param_name: descriptor_data
+    source_action: convert_source_data_to_stp_model_schema-1
+  - param_name: segment_data
+    source_action: segmentation-3
+  - param_name: CustomerID
+    global_parameter: Customer ID
+  - param_name: out_of_sample_data
+    source_action: convert_source_data_to_stp_model_schema-2
+  display_name: out_of_sample_prediction
+  stage_name: Segment Validation And Prediction
+display_name: MarketSegmentation&Prediction
+parameters:
+- param_name: Descriptor Data
+  df_param_type: table
+  display_name: Descriptor Data
+  description: Select the data table that has the demographic, psycho-graphic, firmographic
+    or behavioral data that describes the customers and is not being used as a part
+    of source data. This data is used to validate the segments created using the source
+    data.
+  user_input_required: true
+- param_name: Segmentation Method
+  df_param_type: string
+  display_name: Segmentation Method
+  description: Segmentation methods are the different algorithms that can be applied
+    to generate segmentation using source data.
+  default_value: Kmeans
+  single_select_options:
+  - Gaussian Mixture Model
+  - Hierarchical/Agglomerative
+  - Kmeans
+  user_input_required: true
+- param_name: Sample Data
+  df_param_type: table
+  display_name: Sample Data For Prediction
+  description: Select the data table that has the new user/customer details to predict
+    the segment they are most likely to associate with.
+  user_input_required: true
+- param_name: Classification Method
+  df_param_type: string
+  display_name: Classification Method
+  description: Select the classification algorithm to validate the segments using
+    descriptor data.
+  default_value: XGBoost Classifier
+  single_select_options:
+  - Decision Tree Classifier
+  - Logistic Regression
+  - Random Forest Classifier
+  - XGBoost Classifier
+  user_input_required: true
+- param_name: Customer ID
+  df_param_type: column_names_list
+  display_name: Customer ID (Optional)
+  description: Customer ID is the column in the data set with customer identification
+    number, phone number or email id that uniquely identifies the customer.
+  user_input_required: true
+- param_name: Source Data
+  df_param_type: table
+  display_name: Source Data
+  description: Select the source data table from the dropdown. This table contains
+    the raw data on which you want to run segmentation. This could be sales data,
+    survey data, feedback data collected from customers. It could also be demographic,
+    psycho-graphic, firmographic or behavioral data of the customers.
+  user_input_required: true
+- param_name: Number Of Segments
+  df_param_type: int
+  display_name: Number Of Segments
+  description: Here you specify the number of segments for the segmentation analysis.
+  default_value: '4'
+  user_input_required: true
+description: This app provides you with Market segmentation analysis along with a
+  likelihood estimate of new customers falling into a particular segment. It uses
+  standard segmentation practices (algorithms) to divide customers into smaller groups
+  based on their specific characteristics like transaction history, behavior, age,
+  income, and personality.The app also takes the data of the new users as input and
+  predicts the particular segment they are most likely to associate with.

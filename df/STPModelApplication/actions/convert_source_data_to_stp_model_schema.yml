@@ -1,0 +1,15 @@
+unique_name: convert_source_data_to_stp_model_schema
+action_reference: convert_source_data_to_stp_model_schema
+display_name: convert_source_data_to_stp_model_schema
+description: Action for converting source raw data to STP model schema.
+state: draft
+parameters:
+- param_name: Data
+  df_param_type: table
+  display_name: Source Data
+  description: Select the source data table from the dropdown. This table contains
+    the raw data on which you want to run segmentation. This could be sales data,
+    survey data, feedback data collected from customers. It could also be demographic,
+    psycho-graphic, firmographic or behavioral data of the customers.
+  user_input_required: true
+source_type: python

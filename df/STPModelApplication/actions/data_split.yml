@@ -1,0 +1,17 @@
+unique_name: data_split
+action_reference: data_split
+display_name: data_split
+description: Action to split data according to user specified columns
+state: draft
+df_tags:
+- DataPreparation
+parameters:
+- param_name: columns
+  df_param_type: column_names_list
+  display_name: columns
+  user_input_required: true
+- param_name: data
+  df_param_type: table
+  display_name: data
+  user_input_required: true
+source_type: python

@@ -1,0 +1,8 @@
+name: STPModelApplication
+version: 0.1
+display_name: STPModelApplication
+description: This application contains all the flows and actions needed for STP analysis.
+  STP is a marketing approach where you segment your audience, target the best-fit
+  audience segments for your product, and position your product to capture your target
+  segment effectively.
+state: draft

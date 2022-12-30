@@ -1,0 +1,41 @@
+unique_name: segment_description
+action_reference: segment_description
+display_name: segment_description
+description: Action to train descriptor data to generate prediction and validate the
+  segment description.
+state: draft
+df_tags:
+- Modeling
+- Prediction
+parameters:
+- param_name: segment_data
+  df_param_type: table
+  display_name: segment_data
+  df_tags:
+  - CertifiedData
+  user_input_required: true
+- param_name: method
+  df_param_type: string
+  display_name: method
+  single_select_options:
+  - Decision Tree Classifier
+  - Logistic Regression
+  - Random Forest Classifier
+  - XGBoost Classifier
+  user_input_required: true
+- param_name: segment_column
+  df_param_type: column
+  display_name: segment_column
+  user_input_required: true
+- param_name: descriptor_data
+  df_param_type: table
+  display_name: descriptor_data
+  user_input_required: true
+- param_name: CustomerID
+  df_param_type: column_names_list
+  display_name: Customer ID (Optional)
+  description: Customer ID is the column(s) in the data set with customer identification
+    number, phone number,email id,address and zipcode etc. that uniquely identifies
+    the customer.
+  user_input_required: true
+source_type: python

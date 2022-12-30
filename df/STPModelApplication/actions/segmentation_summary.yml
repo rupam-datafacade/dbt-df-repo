@@ -1,0 +1,17 @@
+unique_name: segmentation_summary
+action_reference: segmentation_summary
+display_name: segmentation_summary
+description: Action to generate segment count and of the data.
+state: draft
+df_tags:
+- ModelSummary
+parameters:
+- param_name: data
+  df_param_type: table
+  display_name: data
+  user_input_required: true
+- param_name: segment_column
+  df_param_type: column
+  display_name: segment_column
+  user_input_required: true
+source_type: python

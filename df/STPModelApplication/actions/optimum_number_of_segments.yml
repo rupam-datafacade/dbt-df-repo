@@ -1,0 +1,51 @@
+unique_name: optimum_number_of_segments
+action_reference: optimum_number_of_segments
+display_name: optimum_number_of_segments
+description: Action to provide validation plots for choosing  optimum number of  segments
+  based on user specified method .
+state: draft
+df_tags:
+- Modeling
+- Validation
+parameters:
+- param_name: start
+  df_param_type: int
+  display_name: Starting Segment Choice
+  description: Please specify number of segment to start with (must be greater than
+    1).
+  default_value: '2'
+  user_input_required: true
+- param_name: end
+  df_param_type: int
+  display_name: End Segment Choice
+  description: Please specify number of segment for which the method will run at max
+    with.
+  default_value: '20'
+  user_input_required: true
+- param_name: method
+  df_param_type: string
+  display_name: Segmentation Method
+  description: Segmentation methods are the different algorithms that can be applied
+    to generate segmentation using source data.
+  default_value: Kmeans
+  single_select_options:
+  - Gaussian Mixture Model
+  - Hierarchical/Agglomerative
+  - Kmeans
+  user_input_required: true
+- param_name: data
+  df_param_type: table
+  display_name: Source Data
+  description: Select the source data table from the dropdown. This table contains
+    the raw data on which you want to run segmentation. This could be sales data,
+    survey data, feedback data collected from customers. It could also be demographic,
+    psycho-graphic, firmographic or behavioral data of the customers.
+  user_input_required: true
+- param_name: CustomerID
+  df_param_type: column_names_list
+  display_name: Customer ID (Optional)
+  description: Customer ID is the column(s) in the data set with customer identification
+    number, phone number,email id,address and zipcode etc. that uniquely identifies
+    the customer.
+  user_input_required: true
+source_type: python

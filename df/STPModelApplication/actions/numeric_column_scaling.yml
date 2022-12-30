@@ -1,0 +1,13 @@
+unique_name: numeric_column_scaling
+action_reference: numeric_column_scaling
+display_name: numeric_column_scaling
+description: This action is for scaling the numeric columns
+state: draft
+df_tags:
+- DataTransform
+parameters:
+- param_name: data
+  df_param_type: table
+  display_name: data
+  user_input_required: true
+source_type: python

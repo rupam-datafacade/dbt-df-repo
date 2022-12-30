@@ -1,0 +1,24 @@
+unique_name: segment_profiling
+action_reference: segment_profiling
+display_name: segment_profiling
+description: Action to create segment profile plots and tables.
+state: draft
+df_tags:
+- ModelSummary
+parameters:
+- param_name: CustomerID
+  df_param_type: column_names_list
+  display_name: Customer ID (Optional)
+  description: Customer ID is the column(s) in the data set with customer identification
+    number, phone number,email id,address and zipcode etc. that uniquely identifies
+    the customer.
+  user_input_required: true
+- param_name: segment_column
+  df_param_type: column
+  display_name: segment_column
+  user_input_required: true
+- param_name: data
+  df_param_type: table
+  display_name: data
+  user_input_required: true
+source_type: python

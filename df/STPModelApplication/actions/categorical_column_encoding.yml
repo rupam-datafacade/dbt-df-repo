@@ -1,0 +1,13 @@
+unique_name: categorical_column_encoding
+action_reference: categorical_column_encoding
+display_name: categorical_column_encoding
+description: Action to encode categorical columns.
+state: draft
+df_tags:
+- EncodeCategorical
+parameters:
+- param_name: data
+  df_param_type: table
+  display_name: data
+  user_input_required: true
+source_type: python
