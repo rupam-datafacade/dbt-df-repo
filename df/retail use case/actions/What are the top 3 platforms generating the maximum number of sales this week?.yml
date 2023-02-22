@@ -1,0 +1,24 @@
+unique_name: What are the top 3 platforms generating the maximum number of sales this
+  week?
+action_reference: What are the top 3 platforms generating the maximum number of sales
+  this week?
+charts:
+- kind: bar
+  expose_data: false
+  name: New chart
+  options:
+    x: Store_type
+    y: total_number_sales
+display_name: What are the top 3 platforms generating the maximum number of sales
+  this week?
+state: draft
+parameters:
+- param_name: number_of_platforms
+  df_param_type: int
+  display_name: number_of_platforms
+  user_input_required: true
+- param_name: tabl
+  df_param_type: string
+  display_name: tabl
+  user_input_required: true
+source_type: df_sql

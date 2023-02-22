@@ -1,0 +1,14 @@
+unique_name: Show me this week’s total number of sales, revenue, and profit?
+action_reference: Show me this week’s total number of sales, revenue, and profit?
+charts:
+- kind: single_value
+  name: New chart
+  expose_data: false
+display_name: Show me this week’s total number of sales, revenue, and profit?
+state: draft
+parameters:
+- param_name: table
+  df_param_type: table
+  display_name: table
+  user_input_required: true
+source_type: df_sql
