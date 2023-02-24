@@ -1,9 +1,15 @@
-unique_name: RFM Segmentation
-action_reference: RFM Segmentation
-display_name: RFM Segmentation
-description: RFM Segmentation
+unique_name: Customer Churn Prediction
+action_reference: Customer Churn Prediction
+display_name: Customer Churn Prediction
+description: Action to predict customer churn
 state: draft
 parameters:
+- param_name: id_interaction
+  df_param_type: column
+  display_name: Interaction ID
+  description: The column with the interaction identification number or interaction
+    date time stamp that uniquely identifies the purchase.
+  user_input_required: true
 - param_name: ts_interaction
   df_param_type: column
   display_name: Interaction Date
@@ -16,21 +22,23 @@ parameters:
   description: The column with the interaction values that lists the interaction amount
     the customer for each interaction.
   user_input_required: true
-- param_name: id_interaction
-  df_param_type: column
-  display_name: Interaction ID
-  description: The column with the interaction identification number or interaction
-    date time stamp that uniquely identifies the purchase.
-  user_input_required: true
 - param_name: input_table
   df_param_type: table
   display_name: Input Table
   description: Input Raw Table
   user_input_required: true
 - param_name: id_customer
-  df_param_type: column
+  df_param_type: column_names_list
   display_name: Customer ID
   description: ' Customer ID is the column(s) in the data set with customer identification
     number, phone number or email id that uniquely identifies the customer.'
+  user_input_required: true
+- param_name: is_churn
+  df_param_type: string
+  display_name: Do you want to see only churned customer(opltional)
+  description: Please select 'Yes' if want to see only churned customer
+  single_select_options:
+  - 'Yes'
+  - 'No'
   user_input_required: true
 source_type: python

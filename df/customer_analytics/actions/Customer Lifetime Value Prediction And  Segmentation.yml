@@ -1,0 +1,51 @@
+unique_name: Customer Lifetime Value Prediction And  Segmentation
+action_reference: Customer Lifetime Value Prediction And  Segmentation
+display_name: Customer Lifetime Value Prediction And  Segmentation
+description: Action to predict customer life time value for a specific time period
+state: draft
+parameters:
+- param_name: id_customer
+  df_param_type: column_names_list
+  display_name: Customer ID
+  description: ' Customer ID is the column(s) in the data set with customer identification
+    number, phone number or email id that uniquely identifies the customer.'
+  user_input_required: true
+- param_name: id_interaction
+  df_param_type: column
+  display_name: Interaction ID
+  description: The column with the interaction identification number or interaction
+    date time stamp that uniquely identifies the purchase.
+  user_input_required: true
+- param_name: input_table
+  df_param_type: table
+  display_name: Input Table
+  description: Input Raw Table
+  user_input_required: true
+- param_name: ts_interaction
+  df_param_type: column
+  display_name: Interaction Date
+  description: ' The column with the interaction date i.e date that was captured by
+    the system when the customer made the interaction.'
+  user_input_required: true
+- param_name: n_interaction_value
+  df_param_type: column
+  display_name: Interaction Value
+  description: The column with the interaction values that lists the interaction amount
+    the customer for each interaction.
+  user_input_required: true
+- param_name: period
+  df_param_type: int
+  display_name: Forecast Period
+  description: Please select the forecast period
+  user_input_required: true
+- param_name: fequency
+  df_param_type: string
+  display_name: Forequency Of The Forecast Period
+  description: Please select frquecy of the forecast period
+  single_select_options:
+  - Calendar Days
+  - Months
+  - Weeks
+  - Years
+  user_input_required: true
+source_type: python
