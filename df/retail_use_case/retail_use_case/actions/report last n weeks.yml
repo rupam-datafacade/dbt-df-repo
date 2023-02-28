@@ -1,0 +1,17 @@
+unique_name: report last n weeks
+action_reference: report last n weeks
+display_name: report last n weeks
+description: report last n weeks
+state: draft
+parameters:
+- param_name: table_name
+  df_param_type: table
+  display_name: table_name
+  description: table_name
+  user_input_required: true
+- param_name: total_weeks
+  df_param_type: string
+  display_name: total_weeks
+  description: total_weeks
+  user_input_required: true
+source_type: df_sql

@@ -1,0 +1,23 @@
+unique_name: top_product_new_customers
+action_reference: top_product_new_customers
+display_name: top_product_new_customers
+description: What are the top three products bought by the new customers?
+state: draft
+parameters:
+- param_name: transaction_table
+  df_param_type: table
+  display_name: transaction_table
+  user_input_required: true
+- param_name: customer_segmentation_table
+  df_param_type: table
+  display_name: customer_segmentation_table
+  user_input_required: true
+- param_name: total_number_product
+  df_param_type: string
+  display_name: total_number_product
+  user_input_required: true
+- param_name: product_table
+  df_param_type: table
+  display_name: product_table
+  user_input_required: true
+source_type: df_sql

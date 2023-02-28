@@ -1,0 +1,12 @@
+unique_name: weekly report
+action_reference: weekly report
+display_name: weekly report
+description: weekly report
+state: draft
+parameters:
+- param_name: table
+  df_param_type: table
+  display_name: table
+  description: table
+  user_input_required: true
+source_type: df_sql

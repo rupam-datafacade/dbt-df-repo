@@ -1,0 +1,17 @@
+unique_name: new_customers
+action_reference: new_customers
+display_name: new_customers
+description: Do we have any new visitors for this week?
+state: draft
+parameters:
+- param_name: transaction_table
+  df_param_type: table
+  display_name: transaction_table
+  description: transaction_table
+  user_input_required: true
+- param_name: customer_segmentation_table
+  df_param_type: table
+  display_name: customer_segmentation_table
+  description: customer_segmentation_table
+  user_input_required: true
+source_type: df_sql

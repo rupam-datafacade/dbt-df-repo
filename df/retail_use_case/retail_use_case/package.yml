@@ -1,0 +1,5 @@
+name: retail_use_case
+version: 0.1
+display_name: Retail use case
+description: Actions required for the retail use case
+state: draft

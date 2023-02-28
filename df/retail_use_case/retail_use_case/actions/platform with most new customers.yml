@@ -1,0 +1,22 @@
+unique_name: platform with most new customers
+action_reference: platform with most new customers
+display_name: platform with most new customers
+description: Which platform has the most new cutomers?
+state: draft
+parameters:
+- param_name: transaction_table
+  df_param_type: table
+  display_name: transaction_table
+  description: transaction_table
+  user_input_required: true
+- param_name: customer_segmentation_table
+  df_param_type: table
+  display_name: customer_segmentation_table
+  description: customer_segmentation_table
+  user_input_required: true
+- param_name: total_platforms
+  df_param_type: int
+  display_name: total_platforms
+  description: total_platforms
+  user_input_required: true
+source_type: df_sql

@@ -1,0 +1,18 @@
+unique_name: top selling product this week
+action_reference: top selling product this week
+display_name: top selling product this week
+state: draft
+parameters:
+- param_name: transaction_table
+  df_param_type: table
+  display_name: transaction_table
+  user_input_required: true
+- param_name: total_number_product
+  df_param_type: string
+  display_name: total_number_product
+  user_input_required: true
+- param_name: product_table
+  df_param_type: table
+  display_name: product_table
+  user_input_required: true
+source_type: df_sql
