@@ -3,6 +3,7 @@ import numpy as np
 from scipy.stats import kurtosis, skew
 from dft import df_plot
 
+
 df = df_helper.get_table(parameter_name="input_table", parameter_display_name="Input Table",parameter_description="Input Raw Table")
 column_category = df_helper.get_string("Column Category", "Chose Column Category","Specify the column category (numeric or category)")
 

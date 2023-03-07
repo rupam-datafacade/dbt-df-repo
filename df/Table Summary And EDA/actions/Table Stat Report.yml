@@ -1,6 +1,7 @@
 unique_name: Table Stat Report
 action_reference: Table Stat Report
 display_name: Table Stat Report
+description: Table Stat Report
 state: draft
 parameters:
 - param_name: Column Category
