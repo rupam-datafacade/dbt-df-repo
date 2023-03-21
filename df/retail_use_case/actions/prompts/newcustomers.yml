@@ -1,0 +1,4 @@
+prompt: new_customers
+reference: retail_use_case.new_customers
+answer_type: Action
+parameter_values: {}

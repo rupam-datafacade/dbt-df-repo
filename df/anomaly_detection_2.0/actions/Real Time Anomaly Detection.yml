@@ -1,12 +1,15 @@
 unique_name: Real Time Anomaly Detection
 action_reference: Real Time Anomaly Detection
 display_name: Real Time Anomaly Detection
+description: Real Time Anomaly Detection
 state: draft
 parameters:
 - param_name: df
   df_param_type: table
   display_name: Table
+  description: Table
   user_input_required: true
+  is_optional: false
 - param_name: observation_period
   df_param_type: int
   display_name: Observation Window
@@ -21,16 +24,19 @@ parameters:
   - '6'
   - '7'
   user_input_required: true
+  is_optional: false
 - param_name: dimension_column
   df_param_type: column
   display_name: Dimension Column
   description: Please specify the dimension (category) column.
   user_input_required: true
+  is_optional: false
 - param_name: timestamp_column
   df_param_type: column
   display_name: Timestamp Column
   description: Select the column which identifies the time-stamps of the table.
   user_input_required: true
+  is_optional: false
 - param_name: threshold_percentage
   df_param_type: int
   display_name: Threshold % Change
@@ -47,10 +53,12 @@ parameters:
   - '35'
   - '40'
   user_input_required: true
+  is_optional: false
 - param_name: email
   df_param_type: string
   display_name: Emails
   description: Enter the emails To get alerts
   default_value: rupam.basu@data-facade.com
   user_input_required: true
+  is_optional: false
 source_type: python

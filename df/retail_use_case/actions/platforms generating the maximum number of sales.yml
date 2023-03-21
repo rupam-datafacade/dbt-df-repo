@@ -1,14 +1,19 @@
 unique_name: platforms generating the maximum number of sales
 action_reference: platforms generating the maximum number of sales
 display_name: platforms generating the maximum number of sales
+description: platforms generating the maximum number of sales
 state: draft
 parameters:
 - param_name: number_of_platforms
   df_param_type: string
   display_name: number_of_platforms
+  description: number_of_platforms
   user_input_required: true
+  is_optional: false
 - param_name: table
   df_param_type: table
   display_name: table
+  description: table
   user_input_required: true
+  is_optional: false
 source_type: df_sql

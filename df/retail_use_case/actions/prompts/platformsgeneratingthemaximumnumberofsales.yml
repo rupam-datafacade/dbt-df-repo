@@ -1,0 +1,4 @@
+prompt: platforms generating the maximum number of sales
+reference: retail_use_case.platforms generating the maximum number of sales
+answer_type: Action
+parameter_values: {}

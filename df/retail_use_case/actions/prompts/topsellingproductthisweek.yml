@@ -1,0 +1,4 @@
+prompt: top selling product this week
+reference: retail_use_case.top selling product this week
+answer_type: Action
+parameter_values: {}

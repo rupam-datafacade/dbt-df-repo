@@ -9,4 +9,5 @@ parameters:
   display_name: table
   description: table
   user_input_required: true
+  is_optional: false
 source_type: df_sql
