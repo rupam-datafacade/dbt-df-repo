@@ -9,9 +9,11 @@ parameters:
   display_name: table_name
   description: table_name
   user_input_required: true
+  is_optional: false
 - param_name: total_weeks
   df_param_type: string
   display_name: total_weeks
   description: total_weeks
   user_input_required: true
+  is_optional: false
 source_type: df_sql

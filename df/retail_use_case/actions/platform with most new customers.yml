@@ -9,14 +9,17 @@ parameters:
   display_name: transaction_table
   description: transaction_table
   user_input_required: true
+  is_optional: false
 - param_name: customer_segmentation_table
   df_param_type: table
   display_name: customer_segmentation_table
   description: customer_segmentation_table
   user_input_required: true
+  is_optional: false
 - param_name: total_platforms
   df_param_type: int
   display_name: total_platforms
   description: total_platforms
   user_input_required: true
+  is_optional: false
 source_type: df_sql

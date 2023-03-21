@@ -1,0 +1,4 @@
+prompt: revenue_from_new_customers
+reference: retail_use_case.revenue_from_new_customers
+answer_type: Action
+parameter_values: {}
