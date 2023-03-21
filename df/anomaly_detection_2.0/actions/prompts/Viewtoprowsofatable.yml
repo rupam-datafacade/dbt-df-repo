@@ -1,0 +1,4 @@
+prompt: View top 1000 rows of a table
+reference: anomaly_detection_2.0.View top 1000 rows of a table
+answer_type: Action
+parameter_values: {}

@@ -9,27 +9,32 @@ parameters:
   display_name: df
   description: Table
   user_input_required: true
+  is_optional: false
 - param_name: observation_period
   df_param_type: int
   display_name: observation_period
   description: Please specify the time window for which you want the alerts if any
     anomaly detected in real time.
   user_input_required: true
+  is_optional: false
 - param_name: forecast_period
   df_param_type: int
   display_name: forecast_period
   description: Please specify the time window for which you want the alerts.
   user_input_required: true
+  is_optional: false
 - param_name: timestamp_column
   df_param_type: column
   display_name: timestamp_column
   description: Select the column which identifies the time-stamps of the table.
   user_input_required: true
+  is_optional: false
 - param_name: target_column
   df_param_type: column
   display_name: target_column
   description: Select the column of which the change in value should trigger the alert.
   user_input_required: true
+  is_optional: false
 - param_name: threshold_percentage
   df_param_type: int
   display_name: threshold_percentage
@@ -48,15 +53,18 @@ parameters:
   - '55'
   - '60'
   user_input_required: true
+  is_optional: false
 - param_name: email
   df_param_type: string
   display_name: email
   description: email
   default_value: rupam.basu@data-facade.com
   user_input_required: true
+  is_optional: false
 - param_name: covariate_columns
   df_param_type: column_names_list
   display_name: covariate_columns
   description: covariate_columns
   user_input_required: true
+  is_optional: false
 source_type: python

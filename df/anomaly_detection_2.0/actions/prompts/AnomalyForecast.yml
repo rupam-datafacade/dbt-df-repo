@@ -1,0 +1,4 @@
+prompt: Anomaly Forecast
+reference: anomaly_detection_2.0.Anomaly Forecast
+answer_type: Action
+parameter_values: {}

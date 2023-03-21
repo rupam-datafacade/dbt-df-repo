@@ -1,0 +1,4 @@
+prompt: create_pivot_table_with_datetime_rows
+reference: anomaly_detection_2.0.create_pivot_table_with_datetime_rows
+answer_type: Action
+parameter_values: {}

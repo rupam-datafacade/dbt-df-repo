@@ -1,0 +1,5 @@
+prompt: create pivot table
+reference: anomaly_detection_2.0.create_pivot_table
+answer_type: Action
+parameter_values: {}
+author: rupam.basu@data-facade.com

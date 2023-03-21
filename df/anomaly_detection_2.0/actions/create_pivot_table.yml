@@ -4,9 +4,39 @@ display_name: create_pivot_table
 description: create_pivot_table
 state: draft
 parameters:
+- param_name: data
+  df_param_type: table
+  display_name: data
+  description: Table
+  user_input_required: true
+  is_optional: false
+- param_name: columns
+  df_param_type: column
+  display_name: columns
+  description: Columns
+  user_input_required: true
+  is_optional: false
+- param_name: rows
+  df_param_type: column
+  display_name: rows
+  description: Rows
+  user_input_required: true
+  is_optional: false
+- param_name: values
+  df_param_type: column
+  display_name: values
+  description: Values
+  user_input_required: true
+  is_optional: false
+- param_name: sql_filter
+  df_param_type: string
+  display_name: sql_filter
+  description: SQL Filter(Optional)
+  user_input_required: true
+  is_optional: false
 - param_name: value_type
   df_param_type: string
-  display_name: 'Aggregation Type '
+  display_name: value_type
   description: 'Aggregation Type '
   single_select_options:
   - Count
@@ -21,29 +51,5 @@ parameters:
   - 80 Percentile
   - 90 Percentile
   user_input_required: true
-- param_name: data
-  df_param_type: table
-  display_name: Table
-  description: Table
-  user_input_required: true
-- param_name: columns
-  df_param_type: column
-  display_name: Columns
-  description: Columns
-  user_input_required: true
-- param_name: sql_filter
-  df_param_type: string
-  display_name: SQL Filter(Optional)
-  description: SQL Filter(Optional)
-  user_input_required: true
-- param_name: rows
-  df_param_type: column
-  display_name: Rows
-  description: Rows
-  user_input_required: true
-- param_name: values
-  df_param_type: column
-  display_name: Values
-  description: Values
-  user_input_required: true
+  is_optional: false
 source_type: python

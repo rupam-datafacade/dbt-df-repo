@@ -66,28 +66,33 @@ parameters:
   - '6'
   - '7'
   user_input_required: true
+  is_optional: false
 - param_name: Enter the KPIs
   df_param_type: column
   display_name: Enter the KPIs
   description: Enter the KPIs
   user_input_required: true
+  is_optional: false
 - param_name: Sql Filter
   df_param_type: string
   display_name: Sql Filter
   description: Sql Filter
   default_value: Optional
   user_input_required: true
+  is_optional: false
 - param_name: Emails
   df_param_type: string
   display_name: Emails
   description: Emails
   default_value: rupam.basu@data-facade.com
   user_input_required: true
+  is_optional: false
 - param_name: Dimension
   df_param_type: column
   display_name: Dimension
   description: Dimension
   user_input_required: true
+  is_optional: false
 - param_name: Threshold % Change
   df_param_type: int
   display_name: Threshold % Change
@@ -104,6 +109,7 @@ parameters:
   - '35'
   - '40'
   user_input_required: true
+  is_optional: false
 - param_name: Observation Window
   df_param_type: int
   display_name: Observation Window
@@ -118,14 +124,17 @@ parameters:
   - '6'
   - '7'
   user_input_required: true
+  is_optional: false
 - param_name: Time Stamp Column
   df_param_type: column
   display_name: Time Stamp Column
   description: Time Stamp Column
   user_input_required: true
+  is_optional: false
 - param_name: Table
   df_param_type: table
   display_name: Table
   description: Table
   user_input_required: true
+  is_optional: false
 description: ''

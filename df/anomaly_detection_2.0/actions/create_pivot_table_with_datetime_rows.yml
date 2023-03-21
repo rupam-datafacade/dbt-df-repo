@@ -9,6 +9,7 @@ parameters:
   display_name: sql_filter
   description: SQL Filter(Optional)
   user_input_required: true
+  is_optional: false
 - param_name: value_type
   df_param_type: string
   display_name: value_type
@@ -26,24 +27,29 @@ parameters:
   - 80 Percentile
   - 90 Percentile
   user_input_required: true
+  is_optional: false
 - param_name: columns
   df_param_type: column
   display_name: columns
   description: Columns
   user_input_required: true
+  is_optional: false
 - param_name: datetime_column
   df_param_type: column
   display_name: datetime_column
   description: Select the datetime column for rows of the pivot table.
   user_input_required: true
+  is_optional: false
 - param_name: data
   df_param_type: table
   display_name: data
   description: Table
   user_input_required: true
+  is_optional: false
 - param_name: values
   df_param_type: column
   display_name: values
   description: Values
   user_input_required: true
+  is_optional: false
 source_type: python
