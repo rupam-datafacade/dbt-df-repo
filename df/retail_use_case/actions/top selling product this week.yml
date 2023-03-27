@@ -10,16 +10,16 @@ parameters:
   description: transaction_table
   user_input_required: true
   is_optional: false
-- param_name: total_number_product
-  df_param_type: string
-  display_name: total_number_product
-  description: total_number_product
-  user_input_required: true
-  is_optional: false
 - param_name: product_table
   df_param_type: table
   display_name: product_table
   description: product_table
+  user_input_required: true
+  is_optional: false
+- param_name: total_number_product
+  df_param_type: string
+  display_name: total_number_product
+  description: total_number_product
   user_input_required: true
   is_optional: false
 source_type: df_sql

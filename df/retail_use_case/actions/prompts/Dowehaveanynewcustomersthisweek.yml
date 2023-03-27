@@ -1,0 +1,7 @@
+prompt: Do we have any new customers this week?
+reference: retail_use_case.new_customers
+answer_type: Action
+parameter_values:
+  customer_segmentation_table: customer_segmentation
+  transaction_table: Transactions
+author: rupam.basu@data-facade.com

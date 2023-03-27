@@ -4,6 +4,18 @@ display_name: top_product_new_customers
 description: What are the top three products bought by the new customers?
 state: draft
 parameters:
+- param_name: product_table
+  df_param_type: table
+  display_name: product_table
+  description: product_table
+  user_input_required: true
+  is_optional: false
+- param_name: total_number_product
+  df_param_type: string
+  display_name: total_number_product
+  description: total_number_product
+  user_input_required: true
+  is_optional: false
 - param_name: transaction_table
   df_param_type: table
   display_name: transaction_table
@@ -14,18 +26,6 @@ parameters:
   df_param_type: table
   display_name: customer_segmentation_table
   description: customer_segmentation_table
-  user_input_required: true
-  is_optional: false
-- param_name: total_number_product
-  df_param_type: string
-  display_name: total_number_product
-  description: total_number_product
-  user_input_required: true
-  is_optional: false
-- param_name: product_table
-  df_param_type: table
-  display_name: product_table
-  description: product_table
   user_input_required: true
   is_optional: false
 source_type: df_sql

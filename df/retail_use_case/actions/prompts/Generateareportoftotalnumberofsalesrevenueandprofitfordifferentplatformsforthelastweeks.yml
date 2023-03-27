@@ -1,0 +1,8 @@
+prompt: Generate a report of total number of sales, revenue, and profit for different
+  platforms for the last 4 weeks.
+reference: retail_use_case.report last n weeks
+answer_type: Action
+parameter_values:
+  total_weeks: 4 weeks
+  table_name: Transactions
+author: rupam.basu@data-facade.com

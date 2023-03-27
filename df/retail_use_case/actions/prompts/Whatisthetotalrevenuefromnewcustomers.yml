@@ -1,0 +1,7 @@
+prompt: What is the total revenue from new customers?
+reference: retail_use_case.revenue_from_new_customers
+answer_type: Action
+parameter_values:
+  transaction_table: Transactions
+  customer_segmentation_table: customer_segmentation
+author: rupam.basu@data-facade.com

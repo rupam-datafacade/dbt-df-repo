@@ -1,0 +1,9 @@
+prompt: What are the top 4 products bought by the new customers?
+reference: retail_use_case.top_product_new_customers
+answer_type: Action
+parameter_values:
+  product_table: prod_cat_info
+  total_number_product: '4'
+  customer_segmentation_table: customer_segmentation
+  transaction_table: Transactions
+author: rupam.basu@data-facade.com

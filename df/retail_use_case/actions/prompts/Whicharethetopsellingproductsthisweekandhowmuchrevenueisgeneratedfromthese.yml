@@ -1,0 +1,9 @@
+prompt: Which are the top 3 selling products this week, and how much revenue is generated
+  from these?
+reference: retail_use_case.top selling product this week
+answer_type: Action
+parameter_values:
+  total_number_product: '3'
+  product_table: prod_cat_info
+  transaction_table: Transactions
+author: rupam.basu@data-facade.com
