@@ -4,35 +4,20 @@ display_name: Customer Churn Prediction
 description: Action to predict customer churn
 state: draft
 parameters:
-- param_name: id_interaction
-  df_param_type: column
-  display_name: Interaction ID
-  description: The column with the interaction identification number or interaction
-    date time stamp that uniquely identifies the purchase.
-  user_input_required: true
 - param_name: ts_interaction
   df_param_type: column
   display_name: Interaction Date
   description: ' The column with the interaction date i.e date that was captured by
     the system when the customer made the interaction.'
   user_input_required: true
+  is_optional: false
 - param_name: n_interaction_value
   df_param_type: column
   display_name: Interaction Value
   description: The column with the interaction values that lists the interaction amount
     the customer for each interaction.
   user_input_required: true
-- param_name: input_table
-  df_param_type: table
-  display_name: Input Table
-  description: Input Raw Table
-  user_input_required: true
-- param_name: id_customer
-  df_param_type: column_names_list
-  display_name: Customer ID
-  description: ' Customer ID is the column(s) in the data set with customer identification
-    number, phone number or email id that uniquely identifies the customer.'
-  user_input_required: true
+  is_optional: false
 - param_name: is_churn
   df_param_type: string
   display_name: Do you want to see only churned customer(opltional)
@@ -41,4 +26,25 @@ parameters:
   - 'Yes'
   - 'No'
   user_input_required: true
+  is_optional: false
+- param_name: id_interaction
+  df_param_type: column
+  display_name: Interaction ID
+  description: The column with the interaction identification number or interaction
+    date time stamp that uniquely identifies the purchase.
+  user_input_required: true
+  is_optional: false
+- param_name: input_table
+  df_param_type: table
+  display_name: Input Table
+  description: Input Raw Table
+  user_input_required: true
+  is_optional: false
+- param_name: id_customer
+  df_param_type: column_names_list
+  display_name: Customer ID
+  description: ' Customer ID is the column(s) in the data set with customer identification
+    number, phone number or email id that uniquely identifies the customer.'
+  user_input_required: true
+  is_optional: false
 source_type: python

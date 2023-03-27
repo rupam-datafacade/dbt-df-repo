@@ -61,7 +61,7 @@ try:
     btyd[id_customer] = table[id_customer]
     bgf = BetaGeoFitter(penalizer_coef=alpha)
     bgf.fit(table[frequency], table[recency], table[t_first_interaction])
-    # Calculating Expected Number of Purchase For 180 days or 6 months
+
     btyd['churn_rate'] = 1 - bgf.conditional_probability_alive(table[frequency], table[recency],
                                                                table[t_first_interaction])
 

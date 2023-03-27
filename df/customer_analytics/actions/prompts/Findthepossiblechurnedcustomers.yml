@@ -1,0 +1,11 @@
+prompt: Find the possible churned customers
+reference: customer_analytics.Customer Churn Prediction
+answer_type: Action
+parameter_values:
+  is_churn: 'Yes'
+  input_table: Transactions
+  id_interaction: transaction_id
+  id_customer: cust_id
+  n_interaction_value: total_amt
+  ts_interaction: tran_date
+author: rupam.basu@data-facade.com
