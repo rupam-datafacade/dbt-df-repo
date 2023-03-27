@@ -1,4 +1,4 @@
 prompt: report last n weeks
 reference: retail_use_case.report last n weeks
 answer_type: Action
-parameter_values: {}
+parameter_values: '{}'

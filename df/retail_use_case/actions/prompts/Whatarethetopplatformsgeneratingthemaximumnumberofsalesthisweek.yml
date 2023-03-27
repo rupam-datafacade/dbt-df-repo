@@ -1,0 +1,8 @@
+prompt: ' What are the top 3 platforms generating the maximum number of sales this
+  week?'
+reference: retail_use_case.platforms generating the maximum number of sales
+answer_type: Action
+parameter_values:
+  number_of_platforms: '3'
+  table: Transactions
+author: rupam.basu@data-facade.com

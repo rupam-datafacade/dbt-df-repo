@@ -1,0 +1,9 @@
+prompt: What are the top three products bought by the new customers?
+reference: retail_use_case.top_product_new_customers
+answer_type: Action
+parameter_values:
+  total_number_product: '3'
+  transaction_table: Transactions
+  customer_segmentation_table: customer_segmentation
+  product_table: prod_cat_info
+author: rupam.basu@data-facade.com

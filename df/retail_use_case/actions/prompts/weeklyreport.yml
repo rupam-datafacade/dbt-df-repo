@@ -1,5 +1,4 @@
 prompt: weekly report
 reference: retail_use_case.weekly report
 answer_type: Action
-parameter_values:
-  table: Transactions
+parameter_values: '{''table'': ''Transactions''}'

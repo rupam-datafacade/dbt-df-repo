@@ -1,6 +1,5 @@
 prompt: Show me this week's revenue, profit and loss
 reference: retail_use_case.weekly report
 answer_type: Action
-parameter_values:
-  table: Transactions
+parameter_values: '{''table'': ''Transactions''}'
 author: rupam.basu@data-facade.com
