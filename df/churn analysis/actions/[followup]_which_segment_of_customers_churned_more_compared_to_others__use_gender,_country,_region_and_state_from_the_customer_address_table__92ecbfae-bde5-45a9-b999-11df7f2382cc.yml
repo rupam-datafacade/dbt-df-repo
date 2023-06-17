@@ -1,6 +1,0 @@
-unique_name: '[followup]_which_segment_of_customers_churned_more_compared_to_others__use_gender,_country,_region_and_state_from_the_customer_address_table__92ecbfae-bde5-45a9-b999-11df7f2382cc'
-action_reference: '[followup]_which_segment_of_customers_churned_more_compared_to_others__use_gender,_country,_region_and_state_from_the_customer_address_table__92ecbfae-bde5-45a9-b999-11df7f2382cc'
-display_name: '[followup] which segment of customers churned more compared to others.
-  Use gender, country, region and state from the customer address table.'
-state: draft
-source_type: python
