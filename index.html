@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="None" /><link rel="canonical" href="https://df-internal.com/" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Data-Facade Internal</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Creating an Agent for Complex Use Cases: A Best Practice Guide";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = "/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> Data-Facade Internal
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href=".">Creating an Agent for Complex Use Cases: A Best Practice Guide</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#best-practices">Best practices</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#provide-relevant-information">Provide Relevant Information</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#define-applicable-conditions">Define Applicable Conditions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#specify-date-and-time-format">Specify Date and Time Format</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#be-cautious-with-table-names">Be Cautious with Table Names</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#include-keywords-for-behavior">Include Keywords for Behavior</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#break-down-instructions">Break Down Instructions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#avoid-contradictions">Avoid Contradictions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#specify-functions">Specify Functions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#clear-instructions">Clear Instructions</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#appendix-1">Appendix 1</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#glossary">Glossary</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#chat-agent">Chat Agent</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#default-application-context">Default Application Context</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#behavior">Behavior</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#keyword-behavior">Keyword (Behavior)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#context-behavior">Context (Behavior)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data">Data</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#share-with">Share with</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#editors">Editors</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#playground">Playground</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#chat">Chat</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#chat-agent-training-data">Chat Agent training data</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">Data-Facade Internal</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+      <li class="breadcrumb-item active">Creating an Agent for Complex Use Cases: A Best Practice Guide</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="creating-an-agent-for-complex-use-cases-a-best-practice-guide">Creating an Agent for Complex Use Cases: A Best Practice Guide</h1>
+<hr />
+<h2 id="introduction">Introduction</h2>
+<p>This guide provides a thorough walkthrough of the best practices to adopt when developing an agent for complex use cases. It aims to serve as a helpful resource for new and existing users as they navigate the nuances of creating an effective agent for answering questions related to complex metrics.
+This document assumes familiarity with the DataFacade platform. In case you are new to the platform and want to get familiar with the different features, please refer to the <a href="https://app.clickup.com/9009089261/v/dc/8cfqjqd-980/8cfqjqd-660">Onboarding Guide</a>. </p>
+<h2 id="best-practices">Best practices</h2>
+<p>In the following points we will be elaborating the best practices along with the importance of it while building and developing an agent. Before starting we would like to let every user know that “The simpler and clearer your instructions, the more efficiently the agent will learn” is the fundamental idea for building any agent. Here are some tips for creating a chat agent:</p>
+<blockquote style="color: #6a737d; background-color: #f3f4f6; border-left: 4px solid #0366d6; padding: 10px;">
+  <span style="color: #0366d6; font-weight: bold;">Note:</span>
+  Users are requested to refer to <a href="#appendix-1" style="color: blue;">Appendix 1</a> to get a better idea of how to distinguish between an agent default context instruction and agent behavior context instructions.
+</blockquote>
+
+<h4 id="provide-relevant-information">Provide Relevant Information</h4>
+<p>Always include information that is applicable to all data in your organization in the agent default context. This ensures consistency and accuracy across all interactions. For example: If the user knows that left join should be used  while joining any tables, user should mention <code>Always use left join for joining any tables</code> in the agent default context.</p>
+<h4 id="define-applicable-conditions">Define Applicable Conditions</h4>
+<p>Specify the conditions that should be considered for all user questions in the Agent Default Context. For example, if you want the answers to only consider "completed" and "successful" orders from the orders table for all questions, mention this in the default context.</p>
+<h4 id="specify-date-and-time-format">Specify Date and Time Format</h4>
+<p>If you require a specific date and time format for the output, such as <code>DD-MM-YYYY</code> format and <code>Asia Pacific</code> time zone, mention it in the agent’s default context to maintain consistency.
+For example to do the above 
+For <code>PostgresQL</code> the instruction in the default context will be as follows:</p>
+<pre><code class="language-text">1.Use the TO_TIMESTAMP function to convert the string into a timestamp.
+2.To format it to the &quot;DD-MM-YYYY&quot; format,  use the TO_CHAR function.
+For example to convert '12-31-2023' to 'DD-MM-YYYY' format use 
+TO_CHAR(TO_TIMESTAMP('12-31-2023', 'MM-DD-YYYY'), 'DD-MM-YYYY') AS formatted_date.
+3.To convert this to a specific Asia-Pacific timezone, use the AT TIME ZONE 'Asia/Kolkata' clause.
+Example: TO_CHAR(TO_TIMESTAMP(date_time_column, 'MM-DD-YYYY') AT TIME ZONE 'Asia/Kolkata', 'DD-MM-YYYY').
+</code></pre>
+<p>For <code>SnowflakeSQL</code> the instruction in the default context will be as follows:</p>
+<pre><code class="language-text">1.Use TO_TIMESTAMP_TZ to convert the string to timestamp with time zone, using the 'DD-MM-YYYY' format.
+2.Use AT TIME ZONE 'Asia/Singapore' converts the timestamp to the Asia/Singapore time zone. Example:
+TO_TIMESTAMP_TZ(date_column, 'DD-MM-YYYY') AT TIME ZONE 'Asia/Singapore'.
+</code></pre>
+<p>For <code>ClickhouseSQL</code> the instruction to convert date time column to "YYYY-MM-DD" format and "Asia Pacific" time zone will be as follows:</p>
+<pre><code class="language-text">1.Use formatDateTime function to format the datetime objects only for displaying the final results.
+Syntax of formatDateTime function is formatDateTime(time, Format).
+For example: question related to daily values should use %F format to display in YYYY-MM-DD format.
+The formatDateTime should be applied outside the toDate function when required as follows
+formatDateTime(toDate(datetime_column, 'Asia/Kolkata'),'%F')
+</code></pre>
+<h3 id="be-cautious-with-table-names">Be Cautious with Table Names</h3>
+<p>Avoid mentioning specific table names in the default context. If a table name is mentioned, the agent will always use it, even if it's not relevant to the behavior, potentially leading to incorrect outputs. For example : Consider the instruction, <code>Use product table for product related information</code>, Now if user ask anything related to the word product (i.e.<code>which product is ordered most in this month?</code>) it will automatically select the product table even if it is not required to select that table.</p>
+<h3 id="include-keywords-for-behavior">Include Keywords for Behavior</h3>
+<p>In the behavior section, include all relevant keywords that users might mention in their questions. This allows the system to map the question to the appropriate behavior. For instance, if users inquire about <code>churn rate</code> or <code>churned customer</code>, add keywords like <code>churn</code> or <code>churn rate</code> to the behavior keywords.</p>
+<h3 id="break-down-instructions">Break Down Instructions</h3>
+<p>Split the context or instructions into smaller steps. This makes them easier to understand. If you have a code as reference, use it to make the instruction [feature not released yet]. For example: suppose there is a behavior which needs to calculate CLTV (customer lifetime value) for each customer for a specific period (behavior  to generate sql code), the instruction can be as follows:</p>
+<pre><code class="language-text">To calculate the Customer Lifetime Value (CLTV) for a specific period, follow these steps:
+
+1. Use the &quot;customers&quot; and &quot;orders&quot; tables.
+2. Join the &quot;customers&quot; and &quot;orders&quot; tables on the &quot;customer_id&quot; column.
+3. Select the following columns:
+   - &quot;customer_id&quot;
+   - The sum of the difference between revenue and cost for each order as &quot;total_profit&quot;
+   - The minimum join date from the &quot;customers&quot; table as &quot;join_date&quot;
+   - The maximum order date from the &quot;orders&quot; table as &quot;last_order_date&quot;
+   - The count of orders for each customer as &quot;total_orders&quot;
+   - The customer lifetime in years, calculated by finding the difference in days between the maximum order date and
+     the minimum join date, divided by 365.0 as &quot;customer_lifetime_years&quot;
+   - The CLTV, calculated by dividing the total profit by the customer lifetime in years as &quot;cltv&quot;
+4. Filter the results to include only customers who joined between the specified period using the WHERE clause with the
+   BETWEEN keyword and the specified dates.
+5. Group the results by the &quot;customer_id&quot; column.
+6. The CLTV for each customer during the specified period will be calculated and displayed in the &quot;cltv&quot; column.
+</code></pre>
+<h3 id="avoid-contradictions">Avoid Contradictions</h3>
+<p>Make sure not to give conflicting information. This can confuse the agent. For example: Mentioning to use <code>created_at</code> column as reference timestamp column in the agent default context and also mentioning to use <code>updated_at</code> as reference timestamp column in some behavior context.</p>
+<h3 id="specify-functions">Specify Functions</h3>
+<p>If the agent uses SQL as the default language and you have domain knowledge, clearly state the functions to be used. This will help avoid errors. For example: consider the following code snippet:</p>
+<pre><code class="language-sql">SELECT 
+    customer_id, 
+    AVG(purchase_amount) AS avg_purchase_value, 
+    COUNT(*) / DATEDIFF(MAX(purchase_date), MIN(purchase_date)) AS avg_purchase_frequency,
+    DATEDIFF(MAX(purchase_date), MIN(purchase_date)) AS customer_lifespan,
+    AVG(purchase_amount) * (COUNT(*) / DATEDIFF(MAX(purchase_date), MIN(purchase_date))) * DATEDIFF(MAX(purchase_date), MIN(purchase_date)) AS CLTV
+FROM transactions
+GROUP BY customer_id
+</code></pre>
+<p>So here the functions used are : </p>
+<pre><code class="language-sql">AVG(), COUNT(), DATEDIFF(), GROUP BY
+</code></pre>
+<p>And the instruction here should be <code>Use the functions: AVG(), COUNT(), DATEDIFF(), GROUP BY.</code> This instruction should be specified at the end of the instruction of the behavior.</p>
+<h3 id="clear-instructions">Clear Instructions</h3>
+<p>Avoid complicated instructions. Break them down into simple steps for better clarity. 
+Selective Output: Choose the columns to be used in generating output carefully. This prevents unnecessary false results.</p>
+<p><We have to also include how to use Playground in case of developing the prompt for any complex queries as a Best Practice></p>
+<p><We have to include the use of training data in addition to context as a best practice with some example></p>
+<h2 id="appendix-1">Appendix 1</h2>
+<table>
+<thead>
+<tr>
+<th>Instruction Type</th>
+<th>Add to agent default context?</th>
+<th>Add To behavior context?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Filtering instructions</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Join type instructions</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Joining table instructions</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Optimization of run time related instructions</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Table alias related instructions</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Column naming instructions</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Timezone conversion instructions</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Data type casting instructions</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Date formatting instructions</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Category matching instructions</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Array data type handling related instructions</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Instruction related to priority of any clauses</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Instruction for identifying a specific category</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Identifying datetime_column instructions</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Identifying booking datetime_column instructions</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Any formula to calculate any metric</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Any specific function to use while calculating any metric</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Step wise instruction to answer any question</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h2 id="glossary">Glossary</h2>
+<h3 id="chat-agent">Chat Agent</h3>
+<p>A component of the DataFacade platform designed to hyper-contextualize domain-specific information. Within its configuration, users select tables and define context, enabling the agent to provide relevant answers to user queries. It is like an assistant to you which consumes all the information, business context and logics of your organization in order to provide relevant insight of your queries and help you out to get the correct insight.</p>
+<h3 id="default-application-context">Default Application Context</h3>
+<p>A setting in the Chat Agent of the DataFacade platform that enables users to define a broad context for responses. For example: it can be used to specify that all datetime columns are in IST and need to be converted to GMT.</p>
+<h3 id="behavior">Behavior</h3>
+<p>Behavior, in the context of a chat agent, refers to predefined responses or actions the agent takes when prompted by specific keywords or queries from the user. 
+It can be a set of instructions, tabular information, business logic, metric definitions, or coding guidelines that guide the agent's reaction when the end user asks any queries. For example, in a retail organization, if a user inquires about "monthly sales metrics," the behavior might trigger the agent to provide tabulated sales data or a visual representation of that month's sales insights.</p>
+<h3 id="keyword-behavior">Keyword (Behavior)</h3>
+<h3 id="context-behavior">Context (Behavior)</h3>
+<h3 id="data">Data</h3>
+<h3 id="share-with">Share with</h3>
+<p>Letting your team members type questions into the chat box to get insights and answers from the organization's data.</p>
+<h3 id="editors">Editors</h3>
+<p>Individuals or users granted specific permissions to modify, configure, or update the chat agent's context, behavior, and table information to shape its responses and the insights it provides from the organization's data.</p>
+<h3 id="playground">Playground</h3>
+<h3 id="chat">Chat</h3>
+<h3 id="chat-agent-training-data">Chat Agent training data</h3>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.5.2
+Build Date UTC : 2023-08-09 07:01:19.553328+00:00
+-->
